@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background-color: #62c6f5;
+    background-color: #EDE3CE;
     padding: 20px;
     text-align: center;
 }
@@ -27,7 +27,7 @@ nav a:hover {
     text-decoration: underline;
 }
 .question-block {
-    background-color: #cfe3f5;
+    background-color: #EDE3CE;
     padding: 20px;
     margin: 20px auto;
     width: 80%;
