@@ -1,2 +1,3 @@
 liste des bugs trouvés:
+bug 1 : quand on passe la souris sur les section celle ci se retractent des que l'on a enlve la souris
 listes des bug corriges et ou ils sont corrigés:
