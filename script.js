@@ -1,13 +1,14 @@
 // Sélection des éléments
+const closeWarningButton = document.getElementById("close-warning");
+const warningMessage = document.getElementById("warning");
 const triggerImage = document.getElementById("trigger-image");
 const navbar = document.getElementById("navbar");
 
 // Afficher/masquer la barre de navigation
 triggerImage.addEventListener("click", (e) => {
-  e.stopPropagation();  // Empêcher la propagation du clic à l'élément parent
-  navbar.classList.toggle("visible"); // Ajouter/retirer la classe 'visible'
+  e.stopPropagation();
+  navbar.classList.toggle("visible");
 
-  // Masquer ou afficher l'image du menu selon l'état de la barre
   if (navbar.classList.contains("visible")) {
     triggerImage.style.display = "none"; // Cacher l'image lorsque la barre est visible
   } else {
@@ -19,6 +20,11 @@ triggerImage.addEventListener("click", (e) => {
 document.addEventListener("click", (e) => {
   if (!navbar.contains(e.target) && !triggerImage.contains(e.target)) {
     navbar.classList.remove("visible");
-    triggerImage.style.display = "block"; // Réafficher l'image si la barre est fermée
+    triggerImage.style.display = "block";
   }
+});
+
+// Fermer l'avertissement au clic sur le bouton
+closeWarningButton.addEventListener("click", () => {
+  warningMessage.classList.add("hidden");
 });

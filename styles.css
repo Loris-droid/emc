@@ -54,6 +54,44 @@ nav a:hover {
     transform: scale(1.02);
     transition: transform 0.2s ease-in-out;
 }
+.warning-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Couvre toute la hauteur de la page */
+    background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent noir */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1000; /* Assurez-vous que l'avertissement est au-dessus de tout */
+  }
+  
+  /* Contenu de l'avertissement */
+  .warning-message p {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .warning-message button {
+    background-color: #fff;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .warning-message button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Masquer l'avertissement lorsqu'il est fermé */
+  .warning-message.hidden {
+    display: none;
+  }
   /* Style de l'image déclencheuse (menu) */
   .trigger-container {
     position: fixed;
