@@ -3,7 +3,7 @@ body {
     background-color: #f0f0f0;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Empêche le défilement horizontal */
+    overflow-x: hidden;
 }
 
 header {
@@ -59,17 +59,15 @@ nav a:hover {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%; /* Couvre toute la hauteur de la page */
-    background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent noir */
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.7); 
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    z-index: 1000; /* Assurez-vous que l'avertissement est au-dessus de tout */
+    z-index: 1000; 
   }
-  
-  /* Contenu de l'avertissement */
   .warning-message p {
     font-size: 20px;
     margin-bottom: 20px;
@@ -88,11 +86,10 @@ nav a:hover {
     background-color: #ddd;
   }
   
-  /* Masquer l'avertissement lorsqu'il est fermé */
+
   .warning-message.hidden {
     display: none;
   }
-  /* Style de l'image déclencheuse (menu) */
   .trigger-container {
     position: fixed;
     top: 20px;
@@ -101,11 +98,11 @@ nav a:hover {
   }
   
   .trigger-container img {
-    width: 40px; /* Taille de l'icône de menu */
+    width: 40px; 
     cursor: pointer;
   }
   
-  /* Barre de navigation latérale */
+
   #navbar {
     position: fixed;
     top: 0;
@@ -113,24 +110,24 @@ nav a:hover {
     width: 250px;
     height: 100%;
     background-color: #333;
-    padding: 20px 10px; /* Ajouter du padding pour ne pas coller les éléments aux bords */
-    transform: translateX(-100%); /* Initialement masqué à gauche */
+    padding: 20px 10px; 
+    transform: translateX(-100%); 
     transition: transform 0.3s ease-in-out;
     z-index: 999;
   }
   
-  /* Liens dans la barre de navigation */
+
   #navbar ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    flex-direction: column; /* Placer les liens de manière verticale */
-    align-items: flex-start; /* Aligner les liens à gauche */
+    flex-direction: column; 
+    align-items: flex-start; 
   }
   
   #navbar li {
-    margin: 15px 0; /* Espacement entre les liens */
+    margin: 15px 0; 
   }
   
   #navbar a {
@@ -139,15 +136,15 @@ nav a:hover {
     font-size: 18px;
     font-weight: bold;
     padding: 10px 20px;
-    display: block; /* Rendre les liens cliquables dans toute leur largeur */
+    display: block; 
   }
   
   #navbar a:hover {
-    background-color: #575757; /* Fond au survol des liens */
+    background-color: #575757; 
     text-decoration: none;
   }
   
-  /* Classe pour afficher la barre */
+
   #navbar.visible {
-    transform: translateX(0); /* Faire glisser la barre de navigation vers la droite */
+    transform: translateX(0); 
   }

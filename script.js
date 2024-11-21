@@ -1,18 +1,17 @@
-// Sélection des éléments
 const closeWarningButton = document.getElementById("close-warning");
 const warningMessage = document.getElementById("warning");
 const triggerImage = document.getElementById("trigger-image");
 const navbar = document.getElementById("navbar");
 
-// Afficher/masquer la barre de navigation
+
 triggerImage.addEventListener("click", (e) => {
   e.stopPropagation();
   navbar.classList.toggle("visible");
 
   if (navbar.classList.contains("visible")) {
-    triggerImage.style.display = "none"; // Cacher l'image lorsque la barre est visible
+    triggerImage.style.display = "none"; 
   } else {
-    triggerImage.style.display = "block"; // Afficher l'image lorsque la barre est cachée
+    triggerImage.style.display = "block";
   }
 });
 
