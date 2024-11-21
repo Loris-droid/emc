@@ -12,6 +12,7 @@ triggerImage.addEventListener("click", (e) => {
     triggerImage.style.display = "none"; 
   } else {
     triggerImage.style.display = "block";
+  }
 });
 
 // Fermer la barre si on clique en dehors
