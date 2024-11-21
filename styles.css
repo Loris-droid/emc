@@ -3,6 +3,7 @@ body {
     background-color: #f0f0f0;
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Empêche le défilement horizontal */
 }
 
 header {
@@ -53,24 +54,16 @@ nav a:hover {
     transform: scale(1.02);
     transition: transform 0.2s ease-in-out;
 }
-/* Style général */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-  }
-  
-  /* Style de l'image déclencheuse */
+  /* Style de l'image déclencheuse (menu) */
   .trigger-container {
     position: fixed;
-    top: 20px; /* Position en haut à gauche */
-    left: 10px; /* Légèrement à gauche */
-    z-index: 1000; /* S'assurer que l'image est au-dessus des autres éléments */
+    top: 20px;
+    left: 10px;
+    z-index: 1000;
   }
   
   .trigger-container img {
-    width: 50px;
+    width: 40px; /* Taille de l'icône de menu */
     cursor: pointer;
   }
   
@@ -79,40 +72,44 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    height: 100%; /* La barre occupe toute la hauteur de la page */
-    width: 250px; /* Largeur de la barre de navigation */
+    width: 250px;
+    height: 100%;
     background-color: #333;
-    padding: 20px;
-    transform: translateX(-100%); /* Masqué initialement à gauche */
+    padding: 20px 10px; /* Ajouter du padding pour ne pas coller les éléments aux bords */
+    transform: translateX(-100%); /* Initialement masqué à gauche */
     transition: transform 0.3s ease-in-out;
-    z-index: 999; /* Assurez-vous que la barre est au-dessus des autres éléments */
+    z-index: 999;
   }
   
-  /* Lien horizontalement dans la barre de navigation */
+  /* Liens dans la barre de navigation */
   #navbar ul {
     list-style: none;
-    display: flex;
-    flex-direction: row; /* Disposer les liens horizontalement */
-    justify-content: flex-start; /* Alignement des liens à gauche */
-    margin: 0;
     padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Placer les liens de manière verticale */
+    align-items: flex-start; /* Aligner les liens à gauche */
   }
   
   #navbar li {
-    margin: 0 20px; /* Espacement des liens */
+    margin: 15px 0; /* Espacement entre les liens */
   }
   
   #navbar a {
     color: white;
     text-decoration: none;
     font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: block; /* Rendre les liens cliquables dans toute leur largeur */
   }
   
   #navbar a:hover {
-    text-decoration: underline;
+    background-color: #575757; /* Fond au survol des liens */
+    text-decoration: none;
   }
   
-  /* Classe pour rendre la barre visible */
+  /* Classe pour afficher la barre */
   #navbar.visible {
-    transform: translateX(0); /* Faire glisser la barre de gauche vers la droite */
+    transform: translateX(0); /* Faire glisser la barre de navigation vers la droite */
   }
