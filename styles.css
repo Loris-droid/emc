@@ -52,7 +52,7 @@ nav a:hover {
 
 .question-block:hover {
     transform: scale(1.02);
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.3s ease;
 }
 .warning-message {
     position: fixed;
