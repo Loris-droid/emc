@@ -48,6 +48,7 @@ header h1 {
     transform: scale(1.02);
     transition: transform 0.3s ease;
 }
+
 .warning-message {
     position: fixed;
     top: 0;
@@ -62,13 +63,14 @@ header h1 {
     text-align: center;
     z-index: 1000; 
   }
-  .warning-message p {
+
+.warning-message p {
     font-family: 'Delius Swash Caps', Arial, sans-serif;
     font-size: 20px;
     margin-bottom: 20px;
   }
   
-  .warning-message button {
+.warning-message button {
     font-family: 'Delius Swash Caps', Arial, sans-serif;
     background-color: #fff;
     color: #333;
@@ -78,28 +80,27 @@ header h1 {
     cursor: pointer;
   }
   
-  .warning-message button:hover {
+.warning-message button:hover {
     background-color: #ddd;
   }
-  
 
-  .warning-message.hidden {
+.warning-message.hidden {
     display: none;
   }
-  .trigger-container {
+
+.trigger-container {
     position: fixed;
     top: 20px;
     left: 10px;
     z-index: 1000;
   }
-  
-  .trigger-container img {
+
+.trigger-container img {
     width: 40px; 
     cursor: pointer;
   }
-  
 
-  #navbar {
+#navbar {
     position: fixed;
     top: 0;
     left: 0;
@@ -112,8 +113,7 @@ header h1 {
     z-index: 999;
   }
   
-
-  #navbar ul {
+#navbar ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -122,11 +122,11 @@ header h1 {
     align-items: flex-start; 
   }
   
-  #navbar li {
+#navbar li {
     margin: 15px 0; 
   }
   
-  #navbar a {
+#navbar a {
     font-family: 'Delius Swash Caps', Arial, sans-serif;
     color: white;
     text-decoration: none;
@@ -136,12 +136,12 @@ header h1 {
     display: block; 
   }
   
-  #navbar a:hover {
+#navbar a:hover {
     background-color: #575757; 
     text-decoration: none;
   }
   
 
-  #navbar.visible {
+#navbar.visible {
     transform: translateX(0); 
   }
