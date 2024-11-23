@@ -149,3 +149,50 @@ nav a:hover {
   #navbar.visible {
     transform: translateX(0); 
   }
+/* Application des polices */
+body {
+  font-family: 'Delius Swash Caps', Arial, sans-serif; /* Texte général */
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+header h1, .question-block h2 {
+  font-family: 'Chewy', sans-serif; /* Titres */
+  color: white;
+  margin-bottom: 10px;
+}
+
+.question-block p {
+  font-family: 'Delius Swash Caps', Arial, sans-serif; /* Texte des paragraphes */
+  font-size: 1.2em;
+  color: #9D7153;
+}
+
+nav a {
+  font-family: 'Delius Swash Caps', Arial, sans-serif; /* Liens */
+  color: #9D7153;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.warning-message p {
+  font-family: 'Delius Swash Caps', Arial, sans-serif;
+  font-size: 20px;
+}
+
+.warning-message button {
+  font-family: 'Delius Swash Caps', Arial, sans-serif;
+}
+
+#navbar a {
+  font-family: 'Delius Swash Caps', Arial, sans-serif;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  display: block;
+}
