@@ -17,16 +17,6 @@ header h1 {
     margin-bottom: 10px;
 }
 
-nav a {
-    color: #9D7153;
-    margin: 0 10px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
 .question-block {
     background-color: #EDE3CE;
     padding: 20px;
