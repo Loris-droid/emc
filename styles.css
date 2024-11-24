@@ -145,3 +145,12 @@ header h1 {
 #navbar.visible {
     transform: translateX(0); 
   }
+.bouton {
+    border: none;
+    outline: none;
+    background: #f0f0f0;
+    color: #333;
+    padding: 10px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
