@@ -3,6 +3,12 @@ const warningMessage = document.getElementById("warning");
 const triggerImage = document.getElementById("trigger-image");
 const navbar = document.getElementById("navbar");
 
+window.onload = function () {
+  setTimeout(function () {
+      document.getElementById('loading-screen').style.display = 'none';
+      document.getElementById('main-content').style.display = 'block';
+  }, 500);
+};
 
 triggerImage.addEventListener("click", (e) => {
   e.stopPropagation();
@@ -27,3 +33,4 @@ document.addEventListener("click", (e) => {
 closeWarningButton.addEventListener("click", () => {
   warningMessage.classList.add("hidden");
 });
+
