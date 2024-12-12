@@ -7,7 +7,7 @@ window.onload = function () {
   setTimeout(function () {
       document.getElementById('loading-screen').style.display = 'none';
       document.getElementById('main-content').style.display = 'block';
-  }, 500);
+  }, 200);
 };
 
 triggerImage.addEventListener("click", (e) => {
@@ -34,3 +34,33 @@ closeWarningButton.addEventListener("click", () => {
   warningMessage.classList.add("hidden");
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const maxSnowflakes = 50; // Nombre maximum de flocons actifs
+  let currentSnowflakes = 0; // Compteur de flocons actifs
+
+  function createSnowflake() {
+      if (currentSnowflakes < maxSnowflakes) {
+          const snowflake = document.createElement("div");
+          snowflake.classList.add("snowflake");
+          snowflake.textContent = "❄"; // Symbole du flocon
+
+          // Ajouter des propriétés aléatoires
+          snowflake.style.left = Math.random() * window.innerWidth + "px"; // Position horizontale aléatoire
+          snowflake.style.fontSize = Math.random() * 10 + 15 + "px"; // Taille aléatoire entre 15px et 25px
+          snowflake.style.animationDuration = Math.random() * 4 + 4 + "s"; // Durée de chute aléatoire entre 4 et 8 secondes
+          snowflake.style.opacity = Math.random() * 0.7 + 0.3; // Opacité entre 0.3 et 1
+
+          document.body.appendChild(snowflake);
+          currentSnowflakes++; // Incrémenter le compteur
+
+          // Supprimer le flocon après la fin de l'animation
+          snowflake.addEventListener("animationend", () => {
+              snowflake.remove();
+              currentSnowflakes--; // Décrémenter le compteur
+          });
+      }
+  }
+
+  // Créer des flocons à un rythme modéré
+  setInterval(createSnowflake, 200); // Chaque 200ms, essayer d'ajouter un nouveau flocon
+});
