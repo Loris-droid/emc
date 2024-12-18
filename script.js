@@ -1,6 +1,10 @@
 // Variables globales
 let effectsRunning = true;
 let snowflakeInterval, starInterval, ribbonInterval;
+const closeWarningButton = document.getElementById("close-warning");
+const warningMessage = document.getElementById("warning");
+const triggerImage = document.getElementById("trigger-image");
+const navbar = document.getElementById("navbar");
 
 // Fonction pour créer un flocon de neige
 function createSnowflake() {
@@ -54,10 +58,10 @@ function stopEffects() {
     clearInterval(snowflakeInterval);
     clearInterval(starInterval);
     clearInterval(ribbonInterval);
-        // Supprimer tous les flocons, étoiles et nœuds existants pour un arrêt total
-        document.querySelectorAll('.snowflake, .falling-star, .falling-ribbon').forEach(el => el.remove());
-      }
 
+    // Supprimer tous les flocons, étoiles et nœuds existants pour un arrêt total
+    document.querySelectorAll('.snowflake, .falling-star, .falling-ribbon').forEach(el => el.remove());
+}
 
 // Gestion du bouton pause/reprise
 document.addEventListener("DOMContentLoaded", () => {
@@ -79,4 +83,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Lancer les effets par défaut
     startEffects();
+});
+
+// Code pour gérer le chargement de la page
+window.onload = function () {
+  setTimeout(function () {
+      document.getElementById('loading-screen').style.display = 'none';
+      document.getElementById('main-content').style.display = 'block';
+  }, 250);
+};
+
+// Gérer l'affichage du menu de navigation
+triggerImage.addEventListener("click", (e) => {
+  e.stopPropagation();
+  navbar.classList.toggle("visible");
+
+  if (navbar.classList.contains("visible")) {
+    triggerImage.style.display = "none"; 
+  } else {
+    triggerImage.style.display = "block";
+  }
+});
+
+// Fermer la barre si on clique en dehors
+document.addEventListener("click", (e) => {
+  if (!navbar.contains(e.target) && !triggerImage.contains(e.target)) {
+    navbar.classList.remove("visible");
+    triggerImage.style.display = "block";
+  }
+});
+
+// Fermer l'avertissement au clic sur le bouton
+closeWarningButton.addEventListener("click", () => {
+  warningMessage.classList.add("hidden");
 });
