@@ -365,3 +365,17 @@ header h1 {
       opacity: 0; /* Les flocons disparaissent progressivement */
   }
 }
+/* Style pour les étoiles tombantes */
+.falling-star {
+  position: fixed;
+  top: -10px;
+  animation: fall linear;
+  transform: translateY(0);
+}
+
+@keyframes fall {
+  to {
+      transform: translateY(100vh); /* Tombe sur toute la hauteur de l'écran */
+      opacity: 0; /* Disparaît progressivement */
+  }
+}

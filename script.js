@@ -29,7 +29,25 @@ document.addEventListener("DOMContentLoaded", function () {
           });
       }
   }
+// Ajout d'étoiles tombantes avec l'émoji 🌟
+function createFallingStar() {
+  const star = document.createElement('div');
+  star.classList.add('falling-star');
+  star.textContent = '🌟'; // Utilisation de l'émoji 🌟
+  star.style.left = Math.random() * window.innerWidth + 'px';
+  star.style.fontSize = Math.random() * 20 + 10 + 'px'; // Taille entre 10px et 30px
+  star.style.animationDuration = Math.random() * 3 + 2 + 's'; // Durée entre 2s et 5s
+  star.style.opacity = Math.random();
+  document.body.appendChild(star);
 
+  // Retirer l'étoile après l'animation
+  star.addEventListener('animationend', () => {
+      star.remove();
+  });
+}
+
+// Générer les étoiles à intervalles réguliers
+setInterval(createFallingStar, 200);
   // Créer des flocons à un rythme modéré
   setInterval(createSnowflake, 200); // Chaque 200ms, essayer d'ajouter un nouveau flocon
 });
