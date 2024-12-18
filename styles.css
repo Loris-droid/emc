@@ -305,47 +305,47 @@ header h1 {
   }
   50% {
   background: #ff00ac;
-  box-shadow: 0px 4.6666666667px 24px 3px #ff00ac;
+  box-shadow: 0px 4.6666666667px 24px 7px #ff00ac;
   }
 }
 @-webkit-keyframes flash-2 {
   0%, 100% {
-  background: aqua;
-  box-shadow: 0px 4.6666666667px 24px 3px aqua;
+  background: #FFB0F8;
+  box-shadow: 0px 4.6666666667px 24px 3px #FFB0F8;
   }
   50% {
-  background: rgba(0, 255, 255, 0.4);
-  box-shadow: 0px 4.6666666667px 24px 3px rgba(0, 255, 255, 0.2);
+  background: #FFB0F8;
+  box-shadow: 0px 4.6666666667px 24px 7px #FFB0F8;
   }
 }
 @keyframes flash-2 {
   0%, 100% {
-  background: aqua;
-  box-shadow: 0px 4.6666666667px 24px 3px aqua;
+  background: #FFB0F8;
+  box-shadow: 0px 4.6666666667px 24px 3px #FFB0F8;
   }
   50% {
-  background: rgba(0, 255, 255, 0.4);
-  box-shadow: 0px 4.6666666667px 24px 3px rgba(0, 255, 255, 0.2);
+  background: #FFB0F8;
+  box-shadow: 0px 4.6666666667px 24px 10px #ffb0f8;
   }
 }
 @-webkit-keyframes flash-3 {
   0%, 100% {
-  background: #f70094;
-  box-shadow: 0px 4.6666666667px 24px 3px #f70094;
+  background: #FFFC00;
+  box-shadow: 0px 4.6666666667px 24px 3px #fffc00;
   }
   50% {
-  background: rgba(247, 0, 148, 0.4);
-  box-shadow: 0px 4.6666666667px 24px 3px rgba(247, 0, 148, 0.2);
+  background: #FFFC00;
+  box-shadow: 0px 4.6666666667px 24px 7px #fffc00;
   }
 }
 @keyframes flash-3 {
   0%, 100% {
-  background: #f70094;
-  box-shadow: 0px 4.6666666667px 24px 3px #f70094;
+  background: #FFFC00;
+  box-shadow: 0px 4.6666666667px 24px 3px #fffc00;
   }
   50% {
-  background: rgba(247, 0, 148, 0.4);
-  box-shadow: 0px 4.6666666667px 24px 3px rgba(247, 0, 148, 0.2);
+  background: #FFFC00;
+  box-shadow: 0px 4.6666666667px 24px 10px #fffc00;
   }
 }
 .snowflake {
