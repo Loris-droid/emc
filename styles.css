@@ -301,7 +301,7 @@ header h1 {
 @keyframes flash-1 {
   0%, 100% {
   background: #ff00ac;
-  box-shadow: 0px 4.6666666667px 24px 3px #ff00ac;
+  box-shadow: 0px 4.6666666667px 24px 0px #ff00ac;
   }
   50% {
   background: #ff00ac;
