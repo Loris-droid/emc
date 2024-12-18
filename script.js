@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
           const snowflake = document.createElement("div");
           snowflake.classList.add("snowflake");
           snowflake.textContent = "❄"; // Symbole du flocon
-          snowflake.textContent = "🌟";
 
           // Ajouter des propriétés aléatoires
           snowflake.style.left = Math.random() * window.innerWidth + "px"; // Position horizontale aléatoire
